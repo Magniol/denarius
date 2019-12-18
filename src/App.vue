@@ -245,6 +245,8 @@
             </v-toolbar>
         </v-card>
 
+        <v-img class="image"  :aspect-ratio="16/9" src=".\ImageBackground.jpg" style="z-index: 0" >
+        </v-img>
 
         <v-content  class="composant">
             <HelloWorld/>
