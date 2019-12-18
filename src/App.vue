@@ -1,145 +1,156 @@
 <template>
-  <v-app>
-<!--    <v-app-bar-->
-<!--      app-->
+    <v-app>
+        <v-card>
+            <v-toolbar
+                    color="#212121"
+                    dark
+                    flat
+            >
+                <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-<!--      color="#D84315"-->
-<!--      dark-->
-<!--    >-->
-<!--      <div class="d-flex align-center">-->
+                <v-toolbar-title>Page title</v-toolbar-title>
 
-<!--        <v-img-->
-<!--          alt="Vuetify Logo"-->
-<!--          class="shrink mr-2"-->
-<!--          contain-->
-<!--          src="https://scontent.fyhu1-1.fna.fbcdn.net/v/t1.15752-9/78571187_999310250401874_2848791403016749056_n.jpg?_nc_cat=103&_nc_ohc=-8ZXmHp0TeAAQmkMzPwJcotoSZHZEWqbYzdvxmjkzIpiivCWsupLmwvqA&_nc_ht=scontent.fyhu1-1.fna&oh=351eaff038ef1229a6dac1424903bc8b&oe=5E82C8D6"-->
-<!--          transition="scale-transition"-->
-<!--          width="150"-->
-<!--        />-->
-<!--      </div>-->
+                <v-spacer></v-spacer>
 
-<!--      <v-spacer>-->
-<!--      </v-spacer>-->
+                <v-btn style="background-color: #3695e3;" class="button" text>
 
-<!--      <div class="container">-->
-<!--        <v-row class="ligne">-->
-<!--          <v-btn icon>-->
-<!--            <h>About Us</h>-->
-<!--          </v-btn>-->
+                    français
+                </v-btn>
 
-<!--          <v-btn icon>-->
-<!--            <h>What We Do</h>-->
-<!--          </v-btn>-->
+                <v-btn icon>
+                    <v-icon>mdi-dots-vertical</v-icon>
+                </v-btn>
 
-<!--          <v-btn icon>-->
-<!--            <h>Ressources</h>-->
-<!--          </v-btn>-->
-
-<!--          <v-btn icon>-->
-<!--            <h>History of Coin</h>-->
-<!--          </v-btn>-->
-
-<!--          <v-btn icon>-->
-<!--            <h>Careers</h>-->
-<!--          </v-btn>-->
-
-<!--          <v-btn icon>-->
-<!--            <h>Client Registration</h>-->
-<!--          </v-btn>-->
-
-<!--          <v-btn icon>-->
-<!--            <h>About Us</h>-->
-<!--          </v-btn>-->
-<!--        </v-row>-->
-
-<!--      </div>-->
-
-    <v-card flat>
-      <v-toolbar
-              color="error"
-              dark
-              extended
-              flat
-              style="opacity: 0.9"
-      >
-
-                <v-img
-                  alt="Vuetify Logo"
-                  class="shrink mr-2"
-                  contain
-                  src="https://scontent.fyhu1-1.fna.fbcdn.net/v/t1.15752-9/78571187_999310250401874_2848791403016749056_n.jpg?_nc_cat=103&_nc_ohc=-8ZXmHp0TeAAQmkMzPwJcotoSZHZEWqbYzdvxmjkzIpiivCWsupLmwvqA&_nc_ht=scontent.fyhu1-1.fna&oh=351eaff038ef1229a6dac1424903bc8b&oe=5E82C8D6"
-                  transition="scale-transition"
-                  width="150"
-                />
-
-      </v-toolbar>
-
-      <v-card
-              class="mx-auto"
-              max-width="700"
-              style="margin-top: -64px;"
-      >
-        <v-toolbar flat max-width="200%" style="position: relative">
-<!--          <v-toolbar-title class="grey&#45;&#45;text">Title</v-toolbar-title>-->
-<!--          <v-toolbar-title class="grey&#45;&#45;text">yes</v-toolbar-title>-->
-          <v-row style="position: absolute">
-
-            <v-toolbar-title class="blackt">
-              <v-btn style="color: black">
-                About Us
-              </v-btn>
-            </v-toolbar-title>
-
-            <v-toolbar-title class="blackt">
-              <v-btn class="boutton" style="color: black">
-                What We Do
-              </v-btn>
-            </v-toolbar-title>
-
-            <v-toolbar-title class="blackt">
-              <v-btn  class="boutton" style="color: black">
-                Ressources
-              </v-btn>
-            </v-toolbar-title>
+                <template v-slot:extension>
+                    <v-tabs
+                            v-model="currentItem"
+                            background-color="transparent"
+                            fixed-tabs
+                            slider-color="white"
+                    >
 
 
-            <v-toolbar-title class="blackt">
-              <v-btn class="boutton" style="color: black">
-                History of Coin
-              </v-btn>
-            </v-toolbar-title>
+                        <v-row  class="title" >
+                            <v-menu
+                                    v-if="more.length"
+                                    bottom
+                                    left
+                            >
+                                <template v-slot:activator="{ on }">
+                                    <v-btn
+                                            text
+                                            class="align-self-center mr-4"
+                                            v-on="on"
+                                    >
+                                        About Us
+                                        <v-icon right>mdi-menu-down</v-icon>
+                                    </v-btn>
+
+                                </template>
+
+                                <v-list class="grey lighten-3">
+                                    <v-list-item
+                                            v-for="item in more"
+                                            :key="item"
+                                            @click="addItem(item)"
+                                    >
+                                        {{ item }}
+                                    </v-list-item>
+                                </v-list>
+                            </v-menu>
 
 
 
-            <v-toolbar-title class="blackt">
-              <v-btn class="boutton"  style="color: black">
-                Careers
-              </v-btn>
-            </v-toolbar-title>
 
-          </v-row>
+                            <v-menu
+                                    v-if="more.length"
+                                    bottom
+                                    left
+                            >
+                                <template v-slot:activator="{ on }">
+                                    <v-btn
+                                            text
+                                            class="align-self-center mr-4"
+                                            v-on="on"
+                                    >
+                                        What We Do
+                                        <v-icon right>mdi-menu-down</v-icon>
+                                    </v-btn>
 
-          <v-spacer></v-spacer>
+                                </template>
 
-<!--          <v-btn icon>-->
-<!--            <v-icon>mdi-magnify</v-icon>-->
-<!--          </v-btn>-->
+                                <v-list class="grey lighten-3">
+                                    <v-list-item
+                                            v-for="item in more"
+                                            :key="item"
+                                            @click="addItem(item)"
+                                    >
+                                        {{ item }}
+                                    </v-list-item>
+                                </v-list>
+                            </v-menu>
 
-          <v-btn icon>
-            <v-icon>mdi-apps</v-icon>
-          </v-btn>
 
-<!--          <v-btn icon>-->
-<!--            <v-icon>mdi-dots-vertical</v-icon>-->
-<!--          </v-btn>-->
-        </v-toolbar>
-      </v-card>
-    </v-card>
+
+                            <v-menu
+                                    v-if="more.length"
+                                    bottom
+                                    left
+                            >
+                                <template v-slot:activator="{ on }">
+                                    <v-btn
+                                            text
+                                            class="align-self-center mr-4"
+                                            v-on="on"
+                                    >
+                                        Ressources
+                                        <v-icon right>mdi-menu-down</v-icon>
+                                    </v-btn>
+
+                                </template>
+
+                                <v-list class="grey lighten-3">
+                                    <v-list-item
+                                            v-for="item in more"
+                                            :key="item"
+                                            @click="addItem(item)"
+                                    >
+                                        {{ item }}
+                                    </v-list-item>
+                                </v-list>
+                            </v-menu>
 
 
 
 
 
+                            <v-menu
+                                    v-if="more.length"
+                                    bottom
+                                    left
+                            >
+                                <template v-slot:activator="{ on }">
+                                    <v-btn
+                                            text
+                                            class="align-self-center mr-4"
+                                            v-on="on"
+                                    >
+                                        History of Coin
+                                        <v-icon right>mdi-menu-down</v-icon>
+                                    </v-btn>
+
+                                </template>
+
+                                <v-list class="grey lighten-3">
+                                    <v-list-item
+                                            v-for="item in more"
+                                            :key="item"
+                                            @click="addItem(item)"
+                                    >
+                                        {{ item }}
+                                    </v-list-item>
+                                </v-list>
+                            </v-menu>
 
 
 
@@ -147,55 +158,187 @@
 
 
 
-<!--      <v-btn-->
-<!--        href="https://github.com/vuetifyjs/vuetify/releases/latest"-->
-<!--        target="_blank"-->
-<!--        text-->
-<!--      >-->
-<!--        <span class="mr-2">Latest Release</span>-->
-<!--        <v-icon>mdi-open-in-new</v-icon>-->
-<!--      </v-btn>-->
+                            <v-menu
+                                    v-if="more.length"
+                                    bottom
+                                    left
+                            >
+                                <template v-slot:activator="{ on }">
+                                    <v-btn
+                                            text
+                                            class="align-self-center mr-4"
+                                            v-on="on"
+                                    >
+                                        Client Registration
+                                        <v-icon right>mdi-menu-down</v-icon>
+                                    </v-btn>
+
+                                </template>
+
+                                <v-list class="grey lighten-3">
+                                    <v-list-item
+                                            v-for="item in more"
+                                            :key="item"
+                                            @click="addItem(item)"
+                                    >
+                                        {{ item }}
+                                    </v-list-item>
+                                </v-list>
+                            </v-menu>
 
 
-<!--    </v-app-bar>-->
 
-    <v-content >
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+
+
+
+                            <v-menu
+                                    v-if="more.length"
+                                    bottom
+                                    left
+                            >
+                                <template v-slot:activator="{ on }">
+                                    <v-btn
+                                            text
+                                            class="align-self-center mr-4"
+                                            v-on="on"
+                                    >
+                                        Contact
+                                        <v-icon right>mdi-menu-down</v-icon>
+                                    </v-btn>
+
+                                </template>
+
+                                <v-list class="grey lighten-3">
+                                    <v-list-item
+                                            v-for="item in more"
+                                            :key="item"
+                                            @click="addItem(item)"
+                                    >
+                                        {{ item }}
+                                    </v-list-item>
+                                </v-list>
+                            </v-menu>
+
+
+                        </v-row>
+
+
+                    </v-tabs>
+                </template>
+            </v-toolbar>
+        </v-card>
+
+
+
+
+        <v-content  class="composant">
+            <HelloWorld/>
+        </v-content>
+
+        <v-card
+                class="affichedate"
+                max-width="250"
+                elevation="7"
+                loading="rgb(33, 33, 33)"
+                loader-height="6"
+        >
+            <v-card-title style="font-size: xx-large" class="pb-0">Monday,</v-card-title>
+
+            <v-card-title style="font-size: xx-large" class="pb-0">December 16</v-card-title>
+
+            <v-card-text class="text--primary">
+                <div> </div>
+                <div> </div>
+                <div style="font-size: larger; margin-left: 20%; margin-top: 5%;">1:05 AM</div>
+            </v-card-text>
+        </v-card>
+
+
+
+
+
+
+
+
+
+
+    </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+    import HelloWorld from './components/HelloWorld';
 
-export default {
-  name: 'App',
+    export default {
+        name: 'App',
 
-  components: {
-    HelloWorld,
-  },
+        components: {
+            HelloWorld,
+        },
 
-  data: () => ({
-    //
-  }),
-};
+        data: () => ({
+            currentItem: 'tab-Web',
+            items: [
+                'Web', 'Shopping', 'Videos', 'Images',
+            ],
+            more: [
+                'News', 'Maps', 'Books', 'Flights', 'Apps',
+            ],
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        }),
+
+
+        methods: {
+            addItem (item) {
+                const removed = this.items.splice(0, 1)
+                this.items.push(
+                    ...this.more.splice(this.more.indexOf(item), 1)
+                )
+                this.more.push(...removed)
+                this.$nextTick(() => { this.currentItem = 'tab-' + item })
+            },
+        },
+
+    };
 </script>
 
 <style>
-  .container {
-    display: flex;
-    justify-content: space-between;
-   }
+    .title {
+        /*display: flex;*/
+        justify-content: center;
+        /*z-index: 3;*/
+        /*margin-left: 5%;*/
+        /*!*margin-top: 20vh;*!*/
+        /*margin-top: 12vmax;*/
+        /*background-color: rgb(33,33,33);*/
+        /*border-radius: 0px 0px 10px 10px;*/
 
-  .ligne{
-    display: flex;
-    justify-content: space-around;
-  }
+    }
 
-  .boutton:hover{
-      background-color: aquamarine;
-      color: aqua;
+    .v-app-bar{
+        position: relative;
+        z-index: 0;
+    }
 
-  }
+    .button:hover{
+        z-index: 5;
+        color: rgb(153, 51, 0);
+    }
+
+    .affichedate{
+        position: absolute;
+        bottom: 0;
+        /*bottom: 50%;*/
+    }
+
+
+    .composant{
+        position: relative;
+    }
+
 </style>
+
+
+
+
+
 
