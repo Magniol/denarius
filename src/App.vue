@@ -6,20 +6,31 @@
                     dark
                     flat
             >
-                <v-app-bar-nav-icon></v-app-bar-nav-icon>
+<!--                <v-app-bar-nav-icon></v-app-bar-nav-icon>-->
+                <v-col style="justify-content: center">
 
-                <v-toolbar-title>Page title</v-toolbar-title>
+<!--                    <v-col>-->
+<!--                        <span style="font-family: Calibri">Groupe Financier</span>-->
+<!--                    </v-col>-->
+                    <v-col style="justify-items: center; align-items: start">
+                        <span style="font-family: Castellar; font-size: xx-large"> DENARIUS </span>
+                    </v-col>
+
+
+<!--                    <v-col>-->
+<!--                        <span style="font-family: Calibri">Financial Group</span>-->
+<!--                    </v-col>-->
+
+                </v-col>
+
+<!--                <v-toolbar-title>Page title</v-toolbar-title>-->
 
                 <v-spacer></v-spacer>
 
-                <v-btn style="background-color: #000000;" class="button" text>
-
+                <v-btn style="background-color: #FFFFFF;" color="#000000" class="button" text>
                     français
                 </v-btn>
 
-                <v-btn icon>
-                    <v-icon>mdi-dots-vertical</v-icon>
-                </v-btn>
 
                 <template v-slot:extension>
                     <v-tabs
@@ -31,12 +42,15 @@
 
 
                         <v-row  class="title" >
+
                             <v-menu
+                                    offset-y
                                     v-if="more.length"
                                     bottom
                                     left
                             >
                                 <template v-slot:activator="{ on }">
+
                                     <v-btn
                                             text
                                             class="align-self-center mr-4"
@@ -54,7 +68,7 @@
                                             :key="item"
                                             @click="addItem(item)"
                                     >
-                                        {{ item }}
+                                        <v-list-item-title>{{ item }}</v-list-item-title>
                                     </v-list-item>
                                 </v-list>
                             </v-menu>
@@ -63,6 +77,7 @@
 
 
                             <v-menu
+                                    offset-y
                                     v-if="more.length"
                                     bottom
                                     left
@@ -85,7 +100,7 @@
                                             :key="item"
                                             @click="addItem(item)"
                                     >
-                                        {{ item }}
+                                        <v-list-item-title>{{ item }}</v-list-item-title>
                                     </v-list-item>
                                 </v-list>
                             </v-menu>
@@ -93,6 +108,7 @@
 
 
                             <v-menu
+                                    offset-y
                                     v-if="more.length"
                                     bottom
                                     left
@@ -115,7 +131,7 @@
                                             :key="item"
                                             @click="addItem(item)"
                                     >
-                                        {{ item }}
+                                        <v-list-item-title>{{ item }}</v-list-item-title>
                                     </v-list-item>
                                 </v-list>
                             </v-menu>
@@ -125,6 +141,7 @@
 
 
                             <v-menu
+                                    offset-y
                                     v-if="more.length"
                                     bottom
                                     left
@@ -147,7 +164,7 @@
                                             :key="item"
                                             @click="addItem(item)"
                                     >
-                                        {{ item }}
+                                        <v-list-item-title>{{ item }}</v-list-item-title>
                                     </v-list-item>
                                 </v-list>
                             </v-menu>
@@ -159,6 +176,7 @@
 
 
                             <v-menu
+                                    offset-y
                                     v-if="more.length"
                                     bottom
                                     left
@@ -181,7 +199,7 @@
                                             :key="item"
                                             @click="addItem(item)"
                                     >
-                                        {{ item }}
+                                        <v-list-item-title>{{ item }}</v-list-item-title>
                                     </v-list-item>
                                 </v-list>
                             </v-menu>
@@ -192,6 +210,7 @@
 
 
                             <v-menu
+                                    offset-y
                                     v-if="more.length"
                                     bottom
                                     left
@@ -214,7 +233,7 @@
                                             :key="item"
                                             @click="addItem(item)"
                                     >
-                                        {{ item }}
+                                        <v-list-item-title>{{ item }}</v-list-item-title>
                                     </v-list-item>
                                 </v-list>
                             </v-menu>
