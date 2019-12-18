@@ -5,21 +5,12 @@
                     color="#993300"
                     dark
                     flat
+                    style=""
             >
 <!--                <v-app-bar-nav-icon></v-app-bar-nav-icon>-->
                 <v-col style="justify-content: center">
 
-<!--                    <v-col>-->
-<!--                        <span style="font-family: Calibri">Groupe Financier</span>-->
-<!--                    </v-col>-->
-                    <v-col style="justify-items: center; align-items: start">
-                        <span style="font-family: Castellar; font-size: xx-large"> DENARIUS </span>
-                    </v-col>
 
-
-<!--                    <v-col>-->
-<!--                        <span style="font-family: Calibri">Financial Group</span>-->
-<!--                    </v-col>-->
 
                 </v-col>
 
@@ -247,6 +238,8 @@
             </v-toolbar>
         </v-card>
 
+        <v-img class="image"  :aspect-ratio="16/9" src=".\ImageBackground.jpg" style="z-index: 0" >
+        </v-img>
 
 
 
@@ -260,6 +253,7 @@
 <!--                elevation="7"-->
 <!--                loading="rgb(33, 33, 33)"-->
 <!--                loader-height="6"-->
+<!--                style="z-index: 10"-->
 <!--        >-->
 <!--            <v-card-title style="font-size: xx-large" class="pb-0">Monday,</v-card-title>-->
 
@@ -271,14 +265,6 @@
 <!--                <div style="font-size: larger; margin-left: 20%; margin-top: 5%;">1:05 AM</div>-->
 <!--            </v-card-text>-->
 <!--        </v-card>-->
-
-
-
-
-
-
-
-
 
 
     </v-app>
