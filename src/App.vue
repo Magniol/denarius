@@ -2,7 +2,7 @@
     <v-app>
         <v-card>
             <v-toolbar
-                    color="#212121"
+                    color="#993300"
                     dark
                     flat
             >
@@ -12,7 +12,7 @@
 
                 <v-spacer></v-spacer>
 
-                <v-btn style="background-color: #3695e3;" class="button" text>
+                <v-btn style="background-color: #000000;" class="button" text>
 
                     français
                 </v-btn>
