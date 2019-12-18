@@ -235,23 +235,23 @@
             <HelloWorld/>
         </v-content>
 
-        <v-card
-                class="affichedate"
-                max-width="250"
-                elevation="7"
-                loading="rgb(33, 33, 33)"
-                loader-height="6"
-        >
-            <v-card-title style="font-size: xx-large" class="pb-0">Monday,</v-card-title>
+<!--        <v-card-->
+<!--                class="affichedate"-->
+<!--                max-width="250"-->
+<!--                elevation="7"-->
+<!--                loading="rgb(33, 33, 33)"-->
+<!--                loader-height="6"-->
+<!--        >-->
+<!--            <v-card-title style="font-size: xx-large" class="pb-0">Monday,</v-card-title>-->
 
-            <v-card-title style="font-size: xx-large" class="pb-0">December 16</v-card-title>
+<!--            <v-card-title style="font-size: xx-large" class="pb-0">December 16</v-card-title>-->
 
-            <v-card-text class="text--primary">
-                <div> </div>
-                <div> </div>
-                <div style="font-size: larger; margin-left: 20%; margin-top: 5%;">1:05 AM</div>
-            </v-card-text>
-        </v-card>
+<!--            <v-card-text class="text&#45;&#45;primary">-->
+<!--                <div> </div>-->
+<!--                <div> </div>-->
+<!--                <div style="font-size: larger; margin-left: 20%; margin-top: 5%;">1:05 AM</div>-->
+<!--            </v-card-text>-->
+<!--        </v-card>-->
 
 
 
