@@ -1,7 +1,6 @@
 <template>
   <v-container class="conteneur"  >
-<!--      <v-img class="image"  :aspect-ratio="16/9" src=".\ImageBackground.jpg" >-->
-<!--      </v-img>-->
+
   </v-container>
 </template>
 
