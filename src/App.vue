@@ -2,16 +2,15 @@
     <v-app>
         <v-card>
             <v-toolbar
-                    color="#993300"
-                    dark
+
                     flat
                     style=""
             >
 <!--                <v-app-bar-nav-icon></v-app-bar-nav-icon>-->
-                <v-col style="justify-content: center">
-
-
-
+                <v-col style="justify-content: initial;  z-index: -1; margin-left: -2%;" >
+<!--                    <v-container style="background-color: white; margin-top: 10%; width: 10%; margin-left: 10%"></v-container>-->
+                    <v-img :aspect-ratio="18/5" src="./test.jpg" style="width: 50%; margin-top: 6%; margin-left: 0%">
+                    </v-img>
                 </v-col>
 
 <!--                <v-toolbar-title>Page title</v-toolbar-title>-->
@@ -29,6 +28,7 @@
                             background-color="transparent"
                             fixed-tabs
                             slider-color="white"
+                            style="margin-left: 18%"
                     >
 
 
@@ -43,9 +43,11 @@
                                 <template v-slot:activator="{ on }">
 
                                     <v-btn
+
                                             text
                                             class="align-self-center mr-4"
                                             v-on="on"
+                                            style="border-color: #993300; border-width: 2px; border-style: solid; background-color: #993300; color: #FFFFFF"
                                     >
                                         About Us
                                         <v-icon right>mdi-menu-down</v-icon>
@@ -78,6 +80,7 @@
                                             text
                                             class="align-self-center mr-4"
                                             v-on="on"
+                                            style="border-color: #993300; border-width: 2px; border-style: solid; background-color: #993300; color: #FFFFFF"
                                     >
                                         What We Do
                                         <v-icon right>mdi-menu-down</v-icon>
@@ -109,6 +112,7 @@
                                             text
                                             class="align-self-center mr-4"
                                             v-on="on"
+                                            style="border-color: #993300; border-width: 2px; border-style: solid; background-color: #993300; color: #FFFFFF"
                                     >
                                         Ressources
                                         <v-icon right>mdi-menu-down</v-icon>
@@ -142,6 +146,7 @@
                                             text
                                             class="align-self-center mr-4"
                                             v-on="on"
+                                            style="border-color: #993300; border-width: 2px; border-style: solid; background-color: #993300; color: #FFFFFF"
                                     >
                                         History of Coin
                                         <v-icon right>mdi-menu-down</v-icon>
@@ -177,6 +182,7 @@
                                             text
                                             class="align-self-center mr-4"
                                             v-on="on"
+                                            style="border-color: #993300; border-width: 2px; border-style: solid; background-color: #993300; color: #FFFFFF"
                                     >
                                         Client Registration
                                         <v-icon right>mdi-menu-down</v-icon>
@@ -211,6 +217,7 @@
                                             text
                                             class="align-self-center mr-4"
                                             v-on="on"
+                                            style="border-color: #993300; border-width: 2px; border-style: solid; background-color: #993300; color: #FFFFFF"
                                     >
                                         Contact
                                         <v-icon right>mdi-menu-down</v-icon>
@@ -309,9 +316,11 @@
 <style>
     .title {
         /*display: flex;*/
+
         justify-content: center;
         /*z-index: 3;*/
-        /*margin-left: 5%;*/
+        /*margin-right: 400%;*/
+        /*margin-left: 75%;*/
         /*!*margin-top: 20vh;*!*/
         /*margin-top: 12vmax;*/
         /*background-color: rgb(33,33,33);*/
