@@ -1,7 +1,38 @@
 <template>
   <v-container class="conteneur"  >
-<!--      <v-img class="image"  :aspect-ratio="16/9" src=".\ImageBackground.jpg" >-->
-<!--      </v-img>-->
+      <v-card
+              class="mx-auto"
+              max-width="400"
+      >
+        <v-img
+                class="white--text align-end"
+                height="200px"
+                src="./argent.jpg"
+                style="margin-top: -250%"
+        >
+          <v-card-title>Welcome to Denarius</v-card-title>
+        </v-img>
+
+<!--        <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>-->
+
+        <v-card-text class="text--primary">
+          <div>Pour de plus amples renseignements relatifs aux opérations de change des entreprises, n'hésitez pas à communiquer avec Denarius. Vos questions et vos commentaires sont extrêmement importants pour Denarius</div>
+
+<!--          <div>Whitsunday Island, Whitsunday Islands</div>-->
+        </v-card-text>
+
+        <v-card-actions>
+          <v-btn
+                  color="#FFFFFF"
+                  text
+                  style="font-size: xx-large; margin-top: -220%"
+          >
+            Thursday, December 19  12:34 PM
+          </v-btn>
+
+
+        </v-card-actions>
+      </v-card>
   </v-container>
 </template>
 
