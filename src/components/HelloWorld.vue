@@ -8,7 +8,7 @@
                 class="white--text align-end"
                 height="200px"
                 src="./argent.jpg"
-                style="margin-top: -250%"
+                style="margin-top: -150%"
         >
           <v-card-title>Welcome to Denarius</v-card-title>
         </v-img>
@@ -25,7 +25,7 @@
           <v-btn
                   color="#FFFFFF"
                   text
-                  style="font-size: xx-large; margin-top: -220%"
+                  style="font-size: xx-large; margin-top: -230%"
           >
             Thursday, December 19  12:34 PM
           </v-btn>
