@@ -90,7 +90,7 @@
 
                                 <v-list class="grey lighten-3">
                                     <v-list-item
-                                            v-for="item in more"
+                                            v-for="item in more1"
                                             :key="item"
                                             @click="addItem(item)"
                                     >
@@ -122,7 +122,7 @@
 
                                 <v-list class="grey lighten-3">
                                     <v-list-item
-                                            v-for="item in more"
+                                            v-for="item in more2"
                                             :key="item"
                                             @click="addItem(item)"
                                     >
@@ -156,7 +156,7 @@
 
                                 <v-list class="grey lighten-3">
                                     <v-list-item
-                                            v-for="item in more"
+                                            v-for="item in more4"
                                             :key="item"
                                             @click="addItem(item)"
                                     >
@@ -164,7 +164,6 @@
                                     </v-list-item>
                                 </v-list>
                             </v-menu>
-
 
 
 
@@ -192,7 +191,7 @@
 
                                 <v-list class="grey lighten-3">
                                     <v-list-item
-                                            v-for="item in more"
+                                            v-for="item in more5"
                                             :key="item"
                                             @click="addItem(item)"
                                     >
@@ -227,7 +226,7 @@
 
                                 <v-list class="grey lighten-3">
                                     <v-list-item
-                                            v-for="item in more"
+                                            v-for="item in more6"
                                             :key="item"
                                             @click="addItem(item)"
                                     >
@@ -245,7 +244,7 @@
             </v-toolbar>
         </v-card>
 
-        <v-img class="image"  :aspect-ratio="16/9" src="" style="z-index: 0" alt="image">
+        <v-img class="image"  :aspect-ratio="16/9" src="./ImageBackground.jpeg" style="z-index: 0" alt="image">
         </v-img>
 
         <v-content  class="composant">
@@ -291,7 +290,25 @@
                 'Web', 'Shopping', 'Videos', 'Images',
             ],
             more: [
-                'News', 'Maps', 'Flights', 'Apps',
+                'Profile', 'Values', 'Expertise', 'Community Involment',
+            ],
+            more1: [
+                'Products', 'Services', 'Trading Procedures',
+            ],
+            more2: [
+                'FAQ', 'Trading Terminoloy', 'Daily Market Reports', 'Useful Links',
+            ],
+            more3: [
+                '',
+            ],
+            more4: [
+                '',
+            ],
+            more5: [
+                'Registration Form', 'Privacy Statement',
+            ],
+            more6: [
+                'Our Coordinates', 'Feedback Form',
             ],
             text: 'Lorem ipsum dolor sit amet, ' +
                 'consectetur adipiscing elit, sed do eiusmod tempor ' +
